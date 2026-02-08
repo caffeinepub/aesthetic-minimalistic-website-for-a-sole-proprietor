@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 17,
   "summary": "Create an aesthetic, minimalistic marketing website for the brand “Vandan” (sole proprietor), focused on Chaniya Choli offerings, with light pink + white color theme, updated About/Services/Process content, no Testimonials section, updated Contact details/placeholders, and an About section photo box placeholder for user-provided image.",
   "architectural_notes": [
     "Theme direction change: use a light pink + white palette consistently across the site while maintaining minimalistic styling.",
@@ -194,6 +194,14 @@
         "REQ-23"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-implement-a-site-wide-maintenance-mode-that-effectively-takes-the-website-offline-by-rendering-only-a-simple-unavailable-screen-instead-of-the-marketing-content-and-enable-it-by-default-so-the-current-production-site-is-taken-down-after-deployment",
+      "title": "Implement a site-wide maintenance mode that effectively takes the website offline by rendering only a simple unavailable screen instead of the marketing content, and enable it by default so the current production site is taken down after deployment.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -254,6 +262,12 @@
     {
       "id": "AR-10",
       "summary": "Update site color palette to match Chaniya Choli colors, and remove text color/colored text from all photo areas (no text coloring on photos/placeholders).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Take down/unpublish the live production website (stop the live deployment).",
       "reqIds": [],
       "status": "pending"
     }

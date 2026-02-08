@@ -2,10 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-global-website-color-palette-to-be-inspired-by-traditional-chaniya-choli-colors-e-g-rich-bridal-tones-such-as-deep-red-maroon-with-complementary-warm-gold-neutral-accents-and-apply-the-updated-palette-consistently-across-the-entire-site-backgrounds-cards-borders-accents-buttons-link-active-states-using-the-existing-css-variable-theme-system",
-      "featureTitle": "Update the global website color palette to be inspired by traditional Chaniya Choli colors (e.g., rich bridal tones such as deep red/maroon with complementary warm-gold/neutral accents), and apply the updated palette consistently across the entire site (backgrounds, cards, borders, accents, buttons, link/active states) using the existing CSS variable theme system.",
+      "featureId": "feature-implement-a-site-wide-maintenance-mode-that-effectively-takes-the-website-offline-by-rendering-only-a-simple-unavailable-screen-instead-of-the-marketing-content-and-enable-it-by-default-so-the-current-production-site-is-taken-down-after-deployment",
+      "featureTitle": "Implement a site-wide maintenance mode that effectively takes the website offline by rendering only a simple unavailable screen instead of the marketing content, and enable it by default so the current production site is taken down after deployment.",
       "files": [
-        "frontend/src/index.css"
+        "frontend/src/App.tsx",
+        "frontend/src/components/maintenance/MaintenanceScreen.tsx",
+        "frontend/src/config/maintenance.ts"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,25 +17,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-22"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-colored-text-styling-from-all-photo-placeholder-areas-across-the-site-so-that-any-text-shown-inside-photo-placeholders-stays-neutral-foreground-muted-and-does-not-switch-to-an-accent-primary-color-on-hover-or-interaction",
-      "featureTitle": "Remove colored text styling from all photo/placeholder areas across the site so that any text shown inside photo placeholders stays neutral (foreground/muted) and does not switch to an accent/primary color on hover or interaction.",
-      "files": [
-        "frontend/src/components/marketing/sections/ColorPlaceholdersSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-23"
+        "REQ-24"
       ],
       "confidence": "high"
     }

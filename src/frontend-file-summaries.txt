@@ -2,7 +2,7 @@
   "frontend/index.html": "HTML entry point with Playfair Display (serif) and Inter (sans) font imports for the warm-neutral minimalist design.",
   "frontend/src/index.css": "Global styles with Chaniya Choli-inspired OKLCH color palette (deep maroon/red primary with warm gold accents and neutral backgrounds), serif headings, sans body, and focus-visible styles for both light and dark modes.",
   "frontend/tailwind.config.js": "Tailwind configuration extending theme with Playfair Display and Inter fonts, warm-neutral color tokens, custom spacing, and soft shadows.",
-  "frontend/src/App.tsx": "Main application component rendering the single-page marketing site with header navigation, all content sections (hero, about, services, process, color placeholders, contact), and footer, with subtle paper-grain background texture.",
+  "frontend/src/App.tsx": "Main application component that conditionally renders either the MaintenanceScreen (when maintenance mode is enabled) or the full marketing site with header, sections, and footer (when disabled).",
   "frontend/src/components/marketing/HeaderNav.tsx": "Sticky header with Vandan branding, desktop navigation with active states, mobile sheet menu, smooth scroll-to-section functionality, and a logo photo placeholder box in the top-right corner (desktop) and inside mobile menu.",
   "frontend/src/components/marketing/Footer.tsx": "Footer component with logo, contact information (email, placeholder phone and location), and neutral Vandan-owned copyright line with no external links.",
   "frontend/src/components/marketing/Section.tsx": "Reusable section wrapper component enforcing consistent vertical spacing and scroll-margin for anchor navigation.",
@@ -14,5 +14,7 @@
   "frontend/src/components/marketing/sections/TestimonialsSection.tsx": "Testimonials section with three client testimonials in card format, including quotes, author names, and roles.",
   "frontend/src/components/marketing/sections/ContactSection.tsx": "Contact section with two-column layout showing contact information (vandan@gmail.com email, placeholder phone and location) and embedded contact form.",
   "frontend/src/components/marketing/ContactForm.tsx": "Accessible contact form with client-side validation, error handling, success/error alerts, and demo mode indication (simulated submission).",
-  "frontend/src/components/marketing/sections/ColorPlaceholdersSection.tsx": "Responsive section displaying a grid of 12 color placeholder tiles with neutral text colors (no hover color changes on text), hover border effects, and individual text input fields beneath each placeholder for adding notes (client-side state only)."
+  "frontend/src/components/marketing/sections/ColorPlaceholdersSection.tsx": "Responsive section displaying a grid of 12 color placeholder tiles with neutral text colors (no hover color changes on text), hover border effects, and individual text input fields beneath each placeholder for adding notes (client-side state only).",
+  "frontend/src/config/maintenance.ts": "Single-switch configuration file for site-wide maintenance mode, enabled by default and toggleable via the MAINTENANCE_MODE constant.",
+  "frontend/src/components/maintenance/MaintenanceScreen.tsx": "Full-viewport centered maintenance screen displaying \"Site Unavailable\" title and message in English, preventing access to all marketing sections."
 }

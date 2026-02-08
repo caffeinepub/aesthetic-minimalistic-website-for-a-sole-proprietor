@@ -1,3 +1,5 @@
+import { MAINTENANCE_MODE } from './config/maintenance';
+import { MaintenanceScreen } from './components/maintenance/MaintenanceScreen';
 import { HeaderNav } from './components/marketing/HeaderNav';
 import { HeroSection } from './components/marketing/sections/HeroSection';
 import { AboutSection } from './components/marketing/sections/AboutSection';
@@ -8,6 +10,12 @@ import { ColorPlaceholdersSection } from './components/marketing/sections/ColorP
 import { Footer } from './components/marketing/Footer';
 
 function App() {
+  // When maintenance mode is enabled, show only the maintenance screen
+  if (MAINTENANCE_MODE) {
+    return <MaintenanceScreen />;
+  }
+
+  // Normal marketing site when maintenance mode is disabled
   return (
     <div className="relative min-h-screen">
       {/* Subtle background texture */}

@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Refresh the site’s theme to a Chaniya Choli–inspired color palette and ensure all photo/placeholder text remains neutral (non-accent) in all states.
+**Goal:** Take the website offline by enabling a site-wide maintenance mode that shows only an unavailable screen, enabled by default after deployment.
 
 **Planned changes:**
-- Update the existing CSS variable theme tokens in `frontend/src/index.css` to a Chaniya Choli–inspired palette (deep red/maroon with warm-gold/neutral accents) and ensure consistent use across backgrounds, cards, borders, accents, buttons, and link/active states in both light and dark modes.
-- Remove accent/primary/hover-based colored text styling from all photo/placeholder areas (including `ColorPlaceholdersSection` and any other placeholder boxes such as logo/photo labels) so placeholder text stays `foreground/muted` and does not change color on hover.
+- Add a single configuration switch (constant or environment-based flag) to control maintenance mode.
+- When maintenance mode is enabled, render a single centered unavailable message screen in English and prevent rendering/access to all existing marketing sections (HeaderNav, Hero, About, Services, Process, ColorPlaceholders, Contact, Footer).
+- Preserve all existing section code so maintenance mode can be turned off without deleting content.
 
-**User-visible outcome:** The website displays a cohesive Chaniya Choli–inspired theme throughout, and any text inside photo placeholders stays neutral and readable without turning into accent colors on hover or interaction.
+**User-visible outcome:** After deployment, visitors see only a simple “site currently unavailable” screen with no access to the normal scrolling marketing page; the site can later be restored by flipping one configuration switch.

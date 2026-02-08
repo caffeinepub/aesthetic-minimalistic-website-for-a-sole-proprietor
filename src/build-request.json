@@ -1,52 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Update site palette to Chaniya Choli-inspired colors and remove colored text from photo placeholders",
-  "priority": "normal",
+  "title": "Take down (disable) the live website by enabling maintenance mode",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-22",
-      "text": "Update the global website color palette to be inspired by traditional Chaniya Choli colors (e.g., rich bridal tones such as deep red/maroon with complementary warm-gold/neutral accents), and apply the updated palette consistently across the entire site (backgrounds, cards, borders, accents, buttons, link/active states) using the existing CSS variable theme system.",
+      "id": "REQ-24",
+      "text": "Implement a site-wide maintenance mode that effectively takes the website offline by rendering only a simple unavailable screen instead of the marketing content, and enable it by default so the current production site is taken down after deployment.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-3"
+          "msg-1"
         ],
         "quotes": [
-          "chang our colours to our chanya cholli"
+          "first take down the website"
         ]
       },
       "acceptanceCriteria": [
-        "Theme colors are changed by updating the existing CSS variables in frontend/src/index.css (light and dark modes remain coherent and readable).",
-        "All sections and shared components that rely on theme tokens (bg-background, text-foreground, text-primary, bg-accent, borders, buttons, etc.) reflect the new Chaniya Choli-inspired palette without introducing hardcoded one-off colors.",
-        "Contrast remains acceptable for headings, body text, and interactive states in both light and dark themes."
-      ]
-    },
-    {
-      "id": "REQ-23",
-      "text": "Remove colored text styling from all photo/placeholder areas across the site so that any text shown inside photo placeholders stays neutral (foreground/muted) and does not switch to an accent/primary color on hover or interaction.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-3"
-        ],
-        "quotes": [
-          "in all the photos remove the text colour"
-        ]
-      },
-      "acceptanceCriteria": [
-        "In ColorPlaceholdersSection, the label text and the \"[Photo to be added]\" caption do not change to primary/accent colors on hover (remove group-hover text color changes); they remain neutral (e.g., text-foreground / text-muted-foreground) in all states.",
-        "Any other placeholder areas that include text (e.g., header/mobile logo photo box label) do not use accent/primary text colors or hover-to-primary text color changes.",
-        "Only text coloring behavior inside photo/placeholder areas is changed; non-photo UI text accents elsewhere (e.g., section dividers, buttons) continue to follow the updated site theme."
+        "When maintenance mode is enabled, the app does not render HeaderNav, Hero, About, Services, Process, ColorPlaceholders, Contact, or Footer content (no scrolling sections should be accessible).",
+        "When maintenance mode is enabled, the app renders a single centered screen with English text that clearly states the site is currently unavailable (e.g., title + short message).",
+        "Maintenance mode can be turned off via a single configuration switch (e.g., a constant or environment-based flag) without deleting existing section code.",
+        "No changes are made to any files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT."
       ]
     }
   ],
   "constraints": [
-    "Frontend files under frontend/src/components/ui and the Internet Identity/actor hooks listed as immutable must not be edited.",
-    "Backend is single-actor Motoko and should not be modified for this request (no backend functionality is needed)."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend must remain single-actor; do not introduce additional canisters or services.",
+    "Use English for any user-facing text."
   ],
   "nonGoals": [
-    "Do not add new sections or change existing content/copy beyond what is required to update colors and remove colored text within photo placeholders.",
-    "Do not implement image uploading or replace placeholder images with real photos."
+    "Deleting the canister, changing DNS, or performing infrastructure-level unpublishing outside of code/deployment.",
+    "Adding authentication or admin panels for toggling maintenance mode at runtime."
   ],
   "imageRequirements": {
     "required": [],
@@ -55,10 +39,7 @@
   "userProfileUpdate": {
     "goalsToAdd": [],
     "goalsToRemove": [],
-    "preferencesToAdd": [
-      "Use a Chaniya Choli-inspired color palette across the site.",
-      "Avoid colored/accent text inside photo placeholder areas; keep placeholder text neutral."
-    ],
+    "preferencesToAdd": [],
     "preferencesToRemove": [],
     "miscToAdd": [],
     "miscToRemove": [],
