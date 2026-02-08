@@ -1,0 +1,39 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Chaniya Choli-inspired palette update and neutral placeholder text",
+  "requirements": [
+    {
+      "id": "REQ-22",
+      "summary": "Update global theme CSS variables to a Chaniya Choli-inspired palette and ensure consistent token-based styling across the site.",
+      "acceptanceCriteria": [
+        "Theme colors are changed by updating the existing CSS variables in frontend/src/index.css (light and dark modes remain coherent and readable).",
+        "All sections and shared components that rely on theme tokens (bg-background, text-foreground, text-primary, bg-accent, borders, buttons, link/active states) reflect the new Chaniya Choli-inspired palette without introducing hardcoded one-off colors.",
+        "Contrast remains acceptable for headings, body text, and interactive states in both light and dark themes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the current light/dark OKLCH CSS variable values (background/foreground/card/popover/primary/secondary/muted/accent/border/input/ring/destructive/success) with a cohesive Chaniya Choli-inspired set (deep red/maroon primary with warm-gold/neutral supporting tones), keeping readability/contrast acceptable in both modes and relying on existing theme tokens (no new hardcoded colors)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "summary": "Ensure all photo/placeholder areas keep text neutral in all states (no hover-to-primary/accent text color changes).",
+      "acceptanceCriteria": [
+        "In ColorPlaceholdersSection, the label text and the \"[Photo to be added]\" caption do not change to primary/accent colors on hover (remove group-hover text color changes); they remain neutral (e.g., text-foreground / text-muted-foreground) in all states.",
+        "Any other placeholder areas that include text (e.g., header/mobile logo photo box label) do not use accent/primary text colors or hover-to-primary text color changes.",
+        "Only text coloring behavior inside photo/placeholder areas is changed; non-photo UI text accents elsewhere (e.g., section dividers, buttons) continue to follow the updated site theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/sections/ColorPlaceholdersSection.tsx",
+          "operation": "modify",
+          "description": "Remove hover-driven accent text classes from the placeholder label and caption inside the photo placeholder tile (e.g., remove group-hover text color changes) so both remain neutral tokens (text-foreground / text-muted-foreground) across all interaction states, while keeping non-text placeholder interactions (like border hover) unchanged."
+        }
+      ]
+    }
+  ]
+}

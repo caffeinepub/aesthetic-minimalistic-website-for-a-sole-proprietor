@@ -1,0 +1,265 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 15,
+  "summary": "Create an aesthetic, minimalistic marketing website for the brand “Vandan” (sole proprietor), focused on Chaniya Choli offerings, with light pink + white color theme, updated About/Services/Process content, no Testimonials section, updated Contact details/placeholders, and an About section photo box placeholder for user-provided image.",
+  "architectural_notes": [
+    "Theme direction change: use a light pink + white palette consistently across the site while maintaining minimalistic styling.",
+    "About section should include a dedicated image placeholder/box next to the text, intended for a user-supplied photo.",
+    "Theme update request: change overall colors to match Chaniya Choli-inspired palette (supersedes prior light pink + white preference if confirmed).",
+    "Photo/grid request: remove any colored text styling on/within all photo placeholders/images (avoid text color overlays on photos)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-aesthetic-minimalistic-marketing-website-layout-suitable-for-a-sole-proprietor-using-a-consistent-visual-system-spacing-typography-and-components-across-all-pages-sections",
+      "title": "Create a responsive, aesthetic, minimalistic marketing website layout suitable for a sole proprietor, using a consistent visual system (spacing, typography, and components) across all pages/sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-simple-single-page-structure-or-simple-routes-if-already-present-in-the-template-with-these-sections-hero-name-short-value-proposition-about-services-process-how-it-works-testimonials-optional-placeholder-and-contact-email-phone-placeholders",
+      "title": "Implement a simple single-page structure (or simple routes if already present in the template) with these sections: Hero (name + short value proposition), About, Services, Process/How it works, Testimonials (optional placeholder), and Contact (email + phone placeholders).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-minimal-contact-form-ui-name-email-message-with-client-side-validation-and-a-clear-success-error-state-if-backend-submission-is-not-implemented-the-ui-must-clearly-indicate-a-non-submitting-demo-state-without-breaking",
+      "title": "Add a minimal contact form UI (name, email, message) with client-side validation and a clear success/error state. If backend submission is not implemented, the UI must clearly indicate a non-submitting demo state without breaking.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-establish-a-distinct-minimalistic-theme-not-blue-purple-and-apply-it-consistently-warm-neutral-palette-off-white-cream-background-charcoal-text-refined-typography-pairing-serif-for-headings-sans-for-body-subtle-borders-and-generous-whitespace",
+      "title": "Establish a distinct minimalistic theme (not blue/purple) and apply it consistently: warm neutral palette (off-white/cream background, charcoal text), refined typography pairing (serif for headings, sans for body), subtle borders, and generous whitespace.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-sole-proprietor-business-placeholders-business-name-city-region-email-phone-and-a-short-copyright-line-and-minimal-social-placeholders-optional",
+      "title": "Add a footer with sole proprietor business placeholders (business name, city/region, email, phone, and a short copyright line) and minimal social placeholders (optional).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-required-static-image-assets-for-the-site-logo-mark-and-subtle-background-stored-under-frontend-public-assets-generated-and-use-them-in-the-ui",
+      "title": "Generate and include required static image assets for the site (logo mark and subtle background), stored under frontend/public/assets/generated, and use them in the UI.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-site-brand-name-text-professional-services-with-vandan-wherever-it-appears-in-the-ui-at-minimum-header-logo-lockup-and-footer-brand-block",
+      "title": "Replace the site brand name text \"Professional Services\" with \"Vandan\" wherever it appears in the UI (at minimum: header logo lockup and footer brand block).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-about-section-content-to-use-the-user-provided-about-text-replace-the-existing-about-paragraphs",
+      "title": "Update the About section content to use the user-provided About text (replace the existing About paragraphs).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-services-section-so-it-only-describes-the-user-provided-offering-vandan-provides-chaniya-choli-for-bridal-and-sometimes-for-sider-too-remove-the-current-multi-card-consulting-services",
+      "title": "Update the Services section so it only describes the user-provided offering: \"Vandan provides Chaniya Choli for bridal and sometimes for sider too\" (remove the current multi-card consulting services).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-how-it-works-process-section-update-the-delivery-step-description-to-min-10-pcs-of-oder-is-available-for-delivery-keeping-the-step-title-as-delivery",
+      "title": "In the How It Works / Process section, update the \"Delivery\" step description to: \"min 10 pcs of oder is available for delivery\" (keeping the step title as \"Delivery\").",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-entire-client-testimonials-section-from-the-page-and-remove-any-navigation-link-s-that-scroll-to-it",
+      "title": "Remove the entire Client Testimonials section from the page, and remove any navigation link(s) that scroll to it.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-contact-details-so-the-email-is-set-to-vandan-gmail-com-keep-phone-and-location-as-clearly-labeled-placeholders-for-the-user-to-fill-in-later-do-not-hardcode-a-phone-number-or-location",
+      "title": "Update contact details so the email is set to \"vandan@gmail.com\". Keep phone and location as clearly labeled placeholders for the user to fill in later (do not hardcode a phone number or location).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-section-that-shows-12-color-photo-placeholders-a-simple-12-item-grid-so-the-user-can-replace-them-later",
+      "title": "Add a new section that shows 12 color/photo placeholders (a simple 12-item grid) so the user can replace them later.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-fixed-header-headernav-to-include-an-additional-logo-photo-box-positioned-on-the-top-right-corner-of-the-header-bar-to-the-right-of-the-navigation-on-desktop-and-accessible-in-the-mobile-header-menu-displayed-as-an-image-placeholder-style-box-that-can-later-be-replaced-with-a-real-logo-image",
+      "title": "Update the fixed header (HeaderNav) to include an additional logo photo box positioned on the top-right corner of the header bar (to the right of the navigation on desktop, and accessible in the mobile header/menu), displayed as an image placeholder-style box that can later be replaced with a real logo image.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-12-item-color-photo-placeholder-grid-colorplaceholderssection-change-the-color-styling-of-the-text-shown-below-each-placeholder-image-the-label-and-the-photo-to-be-added-caption-to-a-new-clearer-color-treatment-that-differs-from-the-current-muted-gray-and-remains-readable-in-both-light-and-dark-themes",
+      "title": "In the 12-item color/photo placeholder grid (ColorPlaceholdersSection), change the color styling of the text shown below each placeholder image (the label and the \"[Photo to be added]\" caption) to a new, clearer color treatment that differs from the current muted gray and remains readable in both light and dark themes.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-12-item-color-photo-placeholder-grid-colorplaceholderssection-so-that-each-placeholder-item-includes-a-text-box-input-field-placed-after-beneath-each-photo-placeholder-area-to-allow-the-user-to-type-a-custom-label-notes-for-each-photo",
+      "title": "Update the 12-item color/photo placeholder grid (ColorPlaceholdersSection) so that each placeholder item includes a text box/input field placed after (beneath) each photo/placeholder area to allow the user to type a custom label/notes for each photo.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-connect-area-from-the-site-footer-including-the-connect-heading-and-all-social-icon-link-placeholders-shown-under-it",
+      "title": "Remove the \"Connect\" area from the site footer, including the \"Connect\" heading and all social icon/link placeholders shown under it.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-brand-tagline-content-that-appears-above-the-footer-contact-information-so-that-vandan-and-any-delivering-exceptional-style-tagline-text-is-not-shown-above-the-contact-details",
+      "title": "Remove the brand/tagline content that appears above the footer Contact information so that \"Vandan\" and any \"Delivering exceptional...\"-style tagline text is not shown above the contact details.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-website-color-theme-to-a-minimal-light-pink-white-palette-applied-consistently-across-all-sections-and-shared-components-backgrounds-cards-borders-accents-buttons-and-link-active-states",
+      "title": "Update the global website color theme to a minimal light pink + white palette, applied consistently across all sections and shared components (backgrounds, cards, borders, accents, buttons, and link/active states).",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-modify-the-about-section-layout-to-include-a-photo-placeholder-box-positioned-beside-the-about-me-content-on-desktop-and-stacked-appropriately-on-mobile-the-placeholder-must-clearly-indicate-that-the-user-will-add-the-photo-later",
+      "title": "Modify the About section layout to include a photo placeholder box positioned beside the About Me content on desktop, and stacked appropriately on mobile; the placeholder must clearly indicate that the user will add the photo later.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-attribution-credit-line-to-remove-any-built-by-love-giggle-com-or-similar-third-party-credit-and-replace-it-with-a-neutral-vandan-owned-copyright-line-in-english-without-linking-to-any-external-website",
+      "title": "Update the footer attribution/credit line to remove any “Built by love giggle.com” (or similar third-party credit) and replace it with a neutral Vandan-owned copyright line in English, without linking to any external website.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-global-website-color-palette-to-be-inspired-by-traditional-chaniya-choli-colors-e-g-rich-bridal-tones-such-as-deep-red-maroon-with-complementary-warm-gold-neutral-accents-and-apply-the-updated-palette-consistently-across-the-entire-site-backgrounds-cards-borders-accents-buttons-link-active-states-using-the-existing-css-variable-theme-system",
+      "title": "Update the global website color palette to be inspired by traditional Chaniya Choli colors (e.g., rich bridal tones such as deep red/maroon with complementary warm-gold/neutral accents), and apply the updated palette consistently across the entire site (backgrounds, cards, borders, accents, buttons, link/active states) using the existing CSS variable theme system.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-colored-text-styling-from-all-photo-placeholder-areas-across-the-site-so-that-any-text-shown-inside-photo-placeholders-stays-neutral-foreground-muted-and-does-not-switch-to-an-accent-primary-color-on-hover-or-interaction",
+      "title": "Remove colored text styling from all photo/placeholder areas across the site so that any text shown inside photo placeholders stays neutral (foreground/muted) and does not switch to an accent/primary color on hover or interaction.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design and build an aesthetic, minimalistic website for a sole proprietor.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update site content/branding to “Vandan”: replace “Professional Services”, update About/Services/How it works copy, remove Testimonials section, set contact email to vandan@gmail.com with phone/location placeholders, and add a 12-color photo placeholder section.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Update header/top-right area to include a logo photo box (image placeholder) positioned in the top-right corner.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Update the 12-photo placeholder grid so the text/caption color below each image is changed (to user-preferred color) and add a text box/input area after each photo.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Remove the \"Connect\" element/section (\"connect one\") from the site UI.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Remove the text content above the Contact section (e.g., \"Vandan\" and the \"Delivering exceptional...\" line/tagline).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update the website color theme to light pink and white (minimalistic, consistent across sections/components).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add an image/photo box placeholder beside the About section content (user will add the photo later).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update/remove the footer credit text/link currently showing “Built by love giggle.com” (replace with appropriate Vandan footer credit or remove it).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Update site color palette to match Chaniya Choli colors, and remove text color/colored text from all photo areas (no text coloring on photos/placeholders).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Vandan minimalistic marketing website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
